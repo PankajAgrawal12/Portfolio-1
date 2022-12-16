@@ -4,6 +4,11 @@ body {
     font-size: 30px;
 }
 
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+
 /* Body Header */
 
 #body-header {
@@ -18,8 +23,56 @@ body {
 
 /* Horizontal Lists */
 
-.horizontal-list {
+.bars{
+    color: white;
+    margin: 0;
+    margin-right: 5%;
+    display: none;
+}
+
+.bars i {
+    font-size: 2rem;
+}
+
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #828470;
+    box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: left;
+    padding: 0px 0.8rem;
+}
+
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 3%;
+}
+
+.dropdown-list li{
+    margin: 0.4rem 0px;
+}
+
+.no-list-style{
     list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.no-list-style li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.horizontal-list {
     padding-left: 0px;
     margin: 0px;
 }
@@ -27,10 +80,7 @@ body {
 .horizontal-list li {
     display: inline-block;
     margin: 0px 8px 8px 0px;
-    font-weight: 100;
-    font-size: 0.9rem;
 }
-
 
 .horizontal-list li a {
     color: white;
@@ -74,7 +124,7 @@ body {
 
 
 .social-icons li a i:hover {
-    box-shadow: 0px 0px 6px 4px cyan;
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
 }
 
 section {
@@ -128,6 +178,7 @@ section:nth-child(2n + 1) {
     width: 12rem;
     margin: auto;
     margin-top: -17vh;
+    /* margin-bottom: 30px; m */
 }
 
 #my-image img {
@@ -188,6 +239,10 @@ section:nth-child(2n + 1) {
 
 .skill-name span {
     margin: 0;
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+    vertical-align: middle;
 }
 
 /*Timeline*/
@@ -410,6 +465,8 @@ textarea {
     border-bottom: 2px solid white;
     /*#2857a4*/
     color: var(--contact-light-text-color);
+    
+    color: #d9dcdd; 
     background: transparent;
     width: 90%;
     line-height: 1.6;
@@ -455,6 +512,19 @@ button:focus {
     outline: none;
 }
 
+Common Text Align Classes
+
+.text-right{
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+} 
 
 /*common color classes */
 
@@ -515,3 +585,41 @@ button:focus {
 .m0 {
     margin: 0;
 }
+
+@media only screen and (max-width: 768px) {
+
+
+    .timeline-box {
+        width: 90%;
+        left: 10% !important;
+    }
+
+    .timeline-box::after {
+        left: -9.3% !important;
+    }
+
+    #timeline-divider {
+        top: 10%;
+        left: 2%;
+    }
+
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-details-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+}
+
