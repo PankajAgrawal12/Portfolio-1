@@ -28,7 +28,7 @@ function scrollVertically(targetSection) {
 }
 
 var progressBars = document.querySelectorAll(".skill-progress > div");
-var skillsContainer = document.getElementById('skills');
+var skillsContainer = document.getElementById('skills-container');
 var animationDone = false;
 
 
