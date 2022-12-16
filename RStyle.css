@@ -255,6 +255,26 @@ section:nth-child(2n + 1) {
     left: 50%;
 }
 
+/* Responsive check on Experience section  */
+@media screen and (max-width:600px){
+    .timeline-divider{
+        left: 5%;
+    }
+    .timeline-box{
+        left: 12% !important;
+        width: 80%;
+    }
+    .timeline-box:nth-child(2n+1)::after{
+        left: -12%;
+    }
+    .timeline-box:nth-child(2n)::after{
+        left: -12%;
+    }
+    html{
+        font-size: 15px;
+    }
+}
+
 .timeline-traveller {
     color: #2857a4;
     position: sticky;
